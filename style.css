@@ -1,0 +1,46 @@
+body {
+    box-sizing: border-box;
+}
+
+.container {
+    display: flex;
+    flex-flow: row wrap;
+    padding: 5px;
+    margin-top: 50px;
+    justify-content: center;
+    align-items: center;
+}
+
+.title {
+    width: 90%;
+    text-align: center;
+    margin: 0;
+    padding-top: 30px;
+    padding-bottom: 20px;
+    margin-bottom: 30px;
+}
+
+img {
+    width: 250px;
+    padding-bottom: 25px;
+}
+
+.container > div {
+    padding: 20px 15px;
+    display: flex;
+    flex-flow: column wrap;
+    justify-content: center;
+    align-items: center;
+}
+
+.container > div > * {
+    margin: 0;
+}
+
+.container > div > h2,h3 {
+    padding: 2px;
+}
+
+.container > div > p {
+    padding-top: 15px;
+}

@@ -1,7 +1,11 @@
 let documentFragment = document.createDocumentFragment();
-let container = document.createElement("DIV");
-document.body.appendChild(container);
-container.classList.add(".container");
+let container = document.querySelector(".container");
+
+let title = document.createElement("H1");
+title.classList.add("title");
+title.innerHTML = "Selector de Llaves";
+container.appendChild(title);
+
 
 //container.classList.add("");
 
@@ -10,18 +14,11 @@ class Key {
         this.keyName = keyName;
         this.model = model;
         this.price = price;
-        this.img = "/source/key.png";
+        this.img = "/sources/key.png";
         
         // Verificar si se puede usar el document.createElement() en los this. 
     }
-    info() {
-        return [this.img, this.keyName, this.model, this.price];
-    }
 }
-
-const key2 = new Key("llave","1223","35");
-
-document.write(key2.keyName);
 
 /* const keyCollectionGenerator = () => {
     for (let i = 0; i > 20; i++){
@@ -38,7 +35,7 @@ document.write(key2.keyName);
 
 keyCollectionGenerator(); */
 
-for (let i = 0; i < 20; i++){
+for (let i = 1; i <= 20; i++){
 
     let randomModel = Math.round(Math.random()*10000);
     let randomPrice = Math.round(Math.random()*10 + 30);
@@ -46,10 +43,11 @@ for (let i = 0; i < 20; i++){
     let div = document.createElement("DIV");
     div.classList.add(`item-${i}`);
 
-    const keyStudent = new Key(`Llave ${i}`,`Model ${randomModel}`,`Price: $${randomPrice}`);
+    const keyStudent = new Key(`Llave ${i}`,`Model ${randomModel}`,`Price: <b style="color: green">$${randomPrice}</b>`);
 
     const keyImage = document.createElement("IMG");
     keyImage.src = keyStudent.img;
+    keyImage.setAttribute("src", keyStudent.img);
 
     const keyName = document.createElement("H2");
     keyName.innerHTML = keyStudent.keyName;
