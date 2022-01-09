@@ -3,7 +3,7 @@ let container = document.querySelector(".container");
 
 let title = document.createElement("H1");
 title.classList.add("title");
-title.innerHTML = "Selector de Llaves";
+title.innerHTML = "SELECTOR DE LLAVES";
 container.appendChild(title);
 
 
@@ -35,6 +35,10 @@ class Key {
 
 keyCollectionGenerator(); */
 
+const hiddenAsign = (number) => {
+    document.querySelector(".key-data").value = number;
+}
+
 for (let i = 1; i <= 20; i++){
 
     let randomModel = Math.round(Math.random()*10000);
@@ -42,6 +46,14 @@ for (let i = 1; i <= 20; i++){
 
     let div = document.createElement("DIV");
     div.classList.add(`item-${i}`);
+    
+    // Este tabIndex sirve para que luego al asignarle un css al parámetro div:focus, la caja adquiera un estilo determinado al hacer click sobre ella.
+    // Podrías ser lo mismo que agregar un "toggle".
+
+    div.tabIndex = i;
+
+    div.addEventListener("click", ()=>{hiddenAsign(randomModel)});
+
 
     const keyStudent = new Key(`Llave ${i}`,`Model ${randomModel}`,`Price: <b style="color: green">$${randomPrice}</b>`);
 

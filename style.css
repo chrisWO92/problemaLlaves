@@ -1,5 +1,8 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@100;300&display=swap');
+
 body {
     box-sizing: border-box;
+    background-color: rgb(207, 205, 205);
 }
 
 .container {
@@ -9,15 +12,18 @@ body {
     margin-top: 50px;
     justify-content: center;
     align-items: center;
+    font-family: 'Roboto', sans-serif;
 }
 
 .title {
     width: 90%;
     text-align: center;
     margin: 0;
-    padding-top: 30px;
+    padding-top: 50px;
     padding-bottom: 20px;
     margin-bottom: 30px;
+    letter-spacing: 2px;
+    word-spacing: 10px;
 }
 
 img {
@@ -27,10 +33,25 @@ img {
 
 .container > div {
     padding: 20px 15px;
+    margin: 20px;
     display: flex;
     flex-flow: column wrap;
     justify-content: center;
     align-items: center;
+    box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+    border-radius: 10px;
+    cursor: pointer;
+    background-color: white;
+}
+
+.container > div:hover {
+    box-shadow: rgba(0, 50, 100, 0.7) 0px 5px 15px;
+    transition: all 0.3s ease;
+}
+
+.container > div:focus {
+    box-shadow: rgba(0, 10, 20, 0.9) 0px 5px 15px;            
+    transition: all 0.3s ease;
 }
 
 .container > div > * {
@@ -43,4 +64,25 @@ img {
 
 .container > div > p {
     padding-top: 15px;
+}
+
+form {
+    text-align: center;
+    margin-top: 5vh;
+    margin-bottom: 10vh;
+}
+
+input[type="submit"]{
+    font-size: 1.3rem;
+    cursor: pointer;
+    padding: 10px 20px;
+    background-color: rgba(0, 100, 200, 0.7);
+    border: 1px solid #000;
+    border-radius: 5px;
+    letter-spacing: 2px;
+}
+
+input[type="submit"]:hover{    
+    background-color: rgba(0, 200, 100, 0.7);
+    transition: all 0.3s ease;
 }
