@@ -49,10 +49,25 @@ img {
     transition: all 0.3s ease;
 }
 
+/* Uso de la librería Animate.css */
 .container > div:focus {
-    box-shadow: rgba(0, 10, 20, 0.9) 0px 5px 15px;            
-    transition: all 0.3s ease;
+    animation: 
+        tada 1s 0s,
+        swing 1s 1s,
+        shakeX 1s 2s,
+        shakeY 1s 3s;
 }
+
+
+/*
+
+Ejemplo de uso de keyframe para hace una animación propia
+
+@keyframes resaltarSeleccion {
+    from {background-color: white;}
+    to {background-color: grey;}
+}
+*/
 
 .container > div > * {
     margin: 0;

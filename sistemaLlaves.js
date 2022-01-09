@@ -46,6 +46,7 @@ for (let i = 1; i <= 20; i++){
 
     let div = document.createElement("DIV");
     div.classList.add(`item-${i}`);
+    // div.classList.add(`animate__animated`,`animate__bounce`);
     
     // Este tabIndex sirve para que luego al asignarle un css al parámetro div:focus, la caja adquiera un estilo determinado al hacer click sobre ella.
     // Podrías ser lo mismo que agregar un "toggle".
